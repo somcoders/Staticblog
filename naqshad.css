@@ -18,72 +18,77 @@
 
 */
 body{
-    font-family: tahoma;
-    background: #fff;
+    font-family: 'Ubuntu',Helvetica, sans-serif;
+    font-size: 16px;
+    color:rgb(43, 35, 30);
+    opacity: 0.9;
+    background: #ddd;
     margin:0;
 }
-
-
-
 /* ==== HEADER AREA */
+a{
+    text-decoration: none;
+}
 .header{
-    background:#10ac84;
-    color:white;
-    padding:50px;
+    background: #0e082f;
+    border-bottom:5px solid #960505;
+    padding:30px;
+}
+.navbar{
+    float: right;
+    margin-top:20px;
+    margin-right: 10%;
+    
 }
 
 .logo{
-    float: left;
+    width: 200px;
+    margin-left:50px ;
 }
-
-.header h1{
-    font-size: 24px;
-    font-family: cursive;
-    text-align: center;
-}
-
-/* ==== nav */
-.navbar{
-    overflow: hidden;
-    background: #333;
-    }
-.navbar a,span{
-    float: left;
-    display: block;
-    text-align: center;
-    padding:20px 50px;
+.navbar a{
+    color:seashell;
+    margin-left:30px;
     text-decoration: none;
-    color:#f1f1f1;
+    font-size: 1.3em;
 }
 .navbar a:hover{
-    background: #ddd;
-    color:black;
+    color:seashell;
+    text-decoration: underline;
+
 }
 
 /* ==== HEADER AREA */
 .main{
     margin: 0  5%;
     overflow: hidden;
+    min-height: 600px;
 }
 
+.cat-head{
+    width:100%;
+    background: #eee;
+    text-align: center;
+    padding:30px 0;
+    min-height: 100px;
+}
 .section{
     float: left;
     width:70%;
     padding:20px;
 }
 .article{
-    background: #f1f1f1;
+    background: #fff;
     margin-bottom: 20px;
 }
+.article:hover{
+    border-right:5px solid #960505;
+}
 .article a{
-    color:#444;
+    color: #333333;;
     text-decoration: none;
+    line-height: 1.6em;
 }
 
-.article a:hover{
-    color:#666;
-    text-decoration: underline;
-}
 
 .article img:hover{
     border:1px solid #eee;
@@ -97,7 +102,7 @@ body{
 .post-image{
     float: left;
     width:40%;
-    height: 250px;
+    height: 260px;
 }
 
 
@@ -116,7 +121,7 @@ body{
 .aside{
     float: left;
     width:23%;
-    background: #f1f1f1;
+    background: #fff;
     margin:20px;
 }
 
@@ -142,8 +147,7 @@ body{
 }
 
 .inner a:hover{
-    text-decoration: underline;
-    color:#666;
+    border-left:5px solid #960505;
 }
 
 .aside a:last-child{
@@ -159,18 +163,26 @@ body{
 /* ==== FOOTER AREA */
 
 .footer{
-/*    position: absolute;*/
-    background: #10ac84;
+    background: #0e082f;
     width:100%;
     text-align: center;
     color:white;
     padding: 20px;
+    border-top:5px solid #960505;
 }
 
-@media screen and (max-width:768px){
-    img,h1{
-        float:none;
-        width:100%;
+@media screen and (max-width:868px){
+    .header{
+        position: relative;
+     text-align: center;
+    }
+    .navbar{
+        text-align: center;
+        font-size: 1em;
+        margin:0;
+    }
+    .article:hover{
+        border:none;
     }
     .section{
         width:100%;
@@ -187,32 +199,51 @@ body{
 }
 
 @media screen and (max-width:480px){
+    
     .post-image{
         width:100%;
         min-height:200px;
     }
-    
     .content{
         width:100%;
         padding:10px;
     }
+ 
     
-    .navbar a:not(:first-of-type){
+   .logo{
+       float: left;
+       width:50%;
+   }
+    
+    /* .navbar a:not(:first-of-type){
+        display:none;
+        width: 100%;
+        float: left;
+    } */
+    .navbar a{
         display:none;
         width: 100%;
         float: left;
     }
     
     .gear{
-        display: block;
+        display: inline-block;
+        color:white;
+        font-size:45px;
+        position: absolute;
+        top:0;
+        right:0;
     }
-    
+
     .navbar.responsive a{
-        display: block;
-        width: 100%;
-        float: none;
-        text-align: left;
-        border-bottom: 1px solid #eee;
+        display: inline-block;
+        padding-top: 20px;
+        text-decoration: none;
     }
+    .navbar.responsive a:hover{
+        text-decoration: underline;
+    }
+
+
     
 }
